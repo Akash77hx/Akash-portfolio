@@ -36,7 +36,7 @@ Watch the video: [YouTube](https://youtu.be/2eIEPHwg9TA)
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Shreyas-29/modern-portfolio.git
+    git clone https://github.com/arvindgfx1//modern-portfolio.git
     ```
 
 2. Install dependencies:

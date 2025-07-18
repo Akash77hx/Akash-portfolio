@@ -1,6 +1,5 @@
 "use client";
 
-import sendMessage from "@/actions/send-message";
 import { cn } from '@/lib/utils';
 import { FormValidator, FormValues } from '@/lib/validators/form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -32,34 +31,34 @@ const Contact = () => {
 
     const [isSent, setIsSent] = useState(false);
 
-    const { mutate: handleSubmit, isPending: isLoading } = useMutation({
-        mutationFn: async ({
-            name,
-            email,
-            phone,
-            message
-        }: FormValues) => {
-            const payload: FormValues = {
-                name,
-                email,
-                phone,
-                message
-            };
-
-            const data = await sendMessage(payload);
-            return data;
-        },
-        onError: (error) => {
-            toast.error("Unable to send message, please try again.")
-        },
-        onSuccess: () => {
-            form.reset();
-            setTimeout(() => {
-                setIsSent(true);
-            }, 1000);
-            toast.success("Your message has been received!");
-        },
-    });
+    // Removed: const { mutate: handleSubmit, isPending: isLoading } = useMutation({
+    // Removed:     mutationFn: async ({
+    // Removed:         name,
+    // Removed:         email,
+    // Removed:         phone,
+    // Removed:         message
+    // Removed:     }: FormValues) => {
+    // Removed:         const payload: FormValues = {
+    // Removed:             name,
+    // Removed:             email,
+    // Removed:             phone,
+    // Removed:             message
+    // Removed:         };
+    // Removed:
+    // Removed:         const data = await sendMessage(payload);
+    // Removed:         return data;
+    // Removed:     },
+    // Removed:     onError: (error) => {
+    // Removed:         toast.error("Unable to send message, please try again.")
+    // Removed:     },
+    // Removed:     onSuccess: () => {
+    // Removed:         form.reset();
+    // Removed:         setTimeout(() => {
+    // Removed:             setIsSent(true);
+    // Removed:         }, 1000);
+    // Removed:         toast.success("Your message has been received!");
+    // Removed:     },
+    // Removed: });
 
 
     return (
@@ -77,30 +76,33 @@ const Contact = () => {
 
             <div className="flex flex-col items-center justify-center gap-5 pt-10 w-full">
                 <div className="flex flex-col items-center justify-center w-full gap-5 lg:flex-row">
-                    <Link href="mailto:sihasaneshreyas@gmail.com" className="flex-[0.5] w-full lg:w-auto">
+                    <Link href="mailto:alammdfaizan54@gmaill.com" className="flex-[0.5] w-full lg:w-auto">
                         <Button type='button' variant="outline" className="flex-col items-start w-full h-auto p-5 hover:scale-100">
                             <h6 className="text-base font-medium">
                                 Email
                             </h6>
                             <p className="mt-2 text-base text-foreground/70">
-                                sihasaneshreyas@gmail.com
+                                alammdfaizan54@gmaill.com
                             </p>
                         </Button>
                     </Link>
-                    <Link href="https://wa.link/c8re0h" className="flex-[0.5] w-full lg:w-auto">
+                    <Link href="https://wa.link/gh0bji" className="flex-[0.5] w-full lg:w-auto">
                         <Button type='button' variant="outline" className="flex-col items-start w-full h-auto p-5 hover:scale-100">
                             <h6 className="text-base font-medium">
                                 Phone
                             </h6>
                             <p className="mt-2 text-base text-foreground/70">
-                                +91 932 235 6392
+                                +91 82102 06614
                             </p>
                         </Button>
                     </Link>
                 </div>
 
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit((e) => handleSubmit(e))} className="flex flex-col items-center justify-center w-full space-y-5">
+                    <form onSubmit={form.handleSubmit((e) => {
+                        // Placeholder for form submission logic
+                        toast.info("This form is currently static and does not send messages.");
+                    })} className="flex flex-col items-center justify-center w-full space-y-5">
                         <AnimationContainer
                             animation="slide-up"
                             delay={0.2}
@@ -114,7 +116,7 @@ const Contact = () => {
                                         <FormControl>
                                             <Input
                                                 {...field}
-                                                disabled={isLoading}
+                                                disabled={false} // Removed isLoading
                                                 type="text"
                                                 placeholder="Name"
                                                 autoComplete="off"
@@ -150,7 +152,7 @@ const Contact = () => {
                                             <FormControl>
                                                 <Input
                                                     {...field}
-                                                    disabled={isLoading}
+                                                    disabled={false} // Removed isLoading
                                                     required
                                                     type="email"
                                                     name="email"
@@ -181,7 +183,7 @@ const Contact = () => {
                                             <FormControl>
                                                 <Input
                                                     {...field}
-                                                    disabled={isLoading}
+                                                    disabled={false} // Removed isLoading
                                                     required
                                                     type="tel"
                                                     name="phone"
@@ -217,7 +219,7 @@ const Contact = () => {
                                         <FormControl>
                                             <Textarea
                                                 {...field}
-                                                disabled={isLoading}
+                                                disabled={false} // Removed isLoading
                                                 required
                                                 rows={5}
                                                 name="message"
@@ -247,7 +249,7 @@ const Contact = () => {
                             <div className="flex items-center justify-center w-full mx-auto">
                                 <SendButton
                                     isSent={isSent}
-                                    isLoading={isLoading}
+                                    isLoading={false} // Removed isLoading
                                     setIsSent={setIsSent}
                                     disabled={form.formState.disabled}
                                 />

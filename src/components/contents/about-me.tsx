@@ -19,13 +19,9 @@ const AboutMe = () => {
             >
                 <div className="w-full flex items-center justify-center">
                     <p className="text-base md:text-lg text-justify w-full">
-                        I am a passionate software developer and designer dedicated to crafting exceptional digital experiences.
-                        With expertise in both development and design, I bring a unique perspective to every project,
-                        ensuring seamless functionality meets stunning aesthetics. My approach combines clean code architecture
-                        with intuitive user interfaces, creating solutions that not only work flawlessly but also delight users.
-                        I specialize in building responsive web applications with React and creating cross-platform mobile experiences
-                        using React Native. When I&apos;m not coding, you&apos;ll find me designing sleek user interfaces in Figma,
-                        always striving to bridge the gap between functionality and beautiful design. Let&apos;s build something amazing together! ✨
+                        Hi, I&apos;m Md Faizan, the founder of DN Software Solution — a virtual IT company dedicated to delivering high-quality digital solutions. With a passion for technology and design, I specialize in web development, app development, and custom IT services tailored to meet your business goals.
+                        <br /><br />
+                        At DN Software Solution, we believe in "Building Digital Dreams" — turning ideas into impactful online experiences. Whether you&apos;re a startup looking for your first website or a business aiming to upgrade your digital presence, I provide end-to-end solutions that are reliable, scalable, and user-friendly.
                     </p>
                 </div>
             </AnimationContainer>

@@ -1,4 +1,3 @@
-import { getReviews } from "@/actions";
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, } from "@/components/ui/carousel";
 import { StarIcon } from "lucide-react";
@@ -14,7 +13,11 @@ type ReviewProps = {
 
 const Reviews = async () => {
 
-    const reviews = await getReviews();
+    const reviews = [
+      { name: "ARVIND KUMAR", country: "INDIA", rating: 5, text: "DN Software Solution delivered exactly what I needed — a clean, fast, and responsive website. Md Faizan is very professional and understands every requirement clearly. Highly recommended!" },
+      { name: "Prince", country: "INDIA", rating: 5, text: "I’m really impressed with the service. The team helped me launch my e-commerce site quickly and handled everything from design to deployment. Great experience!" },
+      { name: "Raja", country: "INDIA", rating: 5, text: "Md Faizan is very skilled and cooperative. He built a custom web application for my business and the result exceeded my expectations. Support after delivery is also excellent." }
+    ];
 
     return (
         <div className="w-full relative pb-20 py-10 z-40">
@@ -35,22 +38,26 @@ const Reviews = async () => {
                 delay={0.2}
                 className="flex items-center justify-center overflow-hidden relative w-full pt-10 mx-auto"
             >
-                <Carousel className="w-full max-w-full">
-                    <CarouselContent>
-                        {reviews.map((review: ReviewProps, index: number) => (
-                            <CarouselItem key={index} className="md:basis-1/2lg:basis-1/3 relative">
-                                <div className="absolute inset-0 w-4/5 h-20 top-1/4 left-1/2 -translate-x-1/2 -rotate-45 lg:h-52 bg-blue-500/10 blur-[8rem]"></div>
-                                <MagicCard className="p-2">
-                                    <Review review={review} />
-                                </MagicCard>
-                            </CarouselItem>
-                        ))}
-                    </CarouselContent>
-                    <div className="flex justify-end gap-4 mt-6">
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </div>
-                </Carousel>
+                {reviews.length === 0 ? (
+                    <div className="w-full text-center py-10 text-lg text-muted-foreground">No reviews available.</div>
+                ) : (
+                    <Carousel className="w-full max-w-full">
+                        <CarouselContent>
+                            {reviews.map((review: ReviewProps, index: number) => (
+                                <CarouselItem key={index} className="md:basis-1/2lg:basis-1/3 relative">
+                                    <div className="absolute inset-0 w-4/5 h-20 top-1/4 left-1/2 -translate-x-1/2 -rotate-45 lg:h-52 bg-blue-500/10 blur-[8rem]"></div>
+                                    <MagicCard className="p-2">
+                                        <Review review={review} />
+                                    </MagicCard>
+                                </CarouselItem>
+                            ))}
+                        </CarouselContent>
+                        <div className="flex justify-end gap-4 mt-6">
+                            <CarouselPrevious />
+                            <CarouselNext />
+                        </div>
+                    </Carousel>
+                )}
             </AnimationContainer>
         </div>
     )

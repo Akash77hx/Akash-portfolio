@@ -27,7 +27,14 @@ const Projects = () => {
         }
     }, []);
 
-    const data = projects?.map((item: any) => item.node);
+    // Hardcoded identical project data for all cards
+    const identicalProject = {
+        title: "Astra",
+        description: "A modern landing page crafted for a no-code site builder, showcasing its potential and simplicity.",
+        github: "https://github.com/your-github/astra",
+        view: "https://astra-demo.com"
+    };
+    const data = [identicalProject, identicalProject, identicalProject, identicalProject];
 
     return (
         <div className="w-full relative pb-20 py-10 z-40">
@@ -61,8 +68,8 @@ const Projects = () => {
                 />
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5 w-full">
-                    {data && data.slice(4, 8)?.map((project: ProjectProps, index) => (
-                        <AnimationContainer key={project.title} delay={0.2 * index + 0.1}>
+                    {data.map((project: any, index) => (
+                        <AnimationContainer key={index} delay={0.2 * index + 0.1}>
                             <MagicCard className="p-2" gradientSize={100} gradientFrom="rgba(14,165,233,1)" gradientTo="rgba(59,130,246,1)">
                                 <Project project={project} />
                             </MagicCard>

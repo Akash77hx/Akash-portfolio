@@ -46,7 +46,7 @@ const Hero = () => {
                 </div>
                 <div className="flex flex-col gap-2 flex-shrink-0">
                     <p className="text-sm font-medium text-foreground/70">
-                        Shreyas Welcome&apos;s you!
+                        faizzu.04 Welcome&apos;s you!
                     </p>
                 </div>
             </AnimationContainer>
@@ -80,7 +80,7 @@ const Hero = () => {
 
                     <div className="text-balance relative z-20 mx-auto my-4 max-w-5xl text-center text-4xl lg:text-5xl font-bold">
                         <motion.h2 className="text-balance !leading-snug">
-                            {"Building Digital Solutions that Make a Difference"
+                            {"We Build Digital Solutions That Truly Matter"
                                 .split(" ")
                                 .map((word, index) => (
                                     <motion.span
@@ -97,7 +97,7 @@ const Hero = () => {
                                             <span className="text-transparent bg-clip-text bg-gradient-to-br from-sky-500 to-blue-500">Digital</span>
                                         ) : word}
                                         &nbsp;
-                                        {word === "that" && <br />}
+                                        {word === "That" && <br />}
                                     </motion.span>
                                 ))}
                         </motion.h2>
@@ -111,7 +111,7 @@ const Hero = () => {
                 className="relative mt-6 flex flex-col items-center justify-center gap-y-6 max-w-3xl mx-auto text-center"
             >
                 <p className="text-base text-muted-foreground !leading-relaxed">
-                    Your one-stop solution for professional web development and design. <span className="inline-blocklg:inline-block">Whether you need a stunning website, an e-commerce platform, or a custom web application, I provide end-to-end solutions that help your business stand out in the digital landscape.</span>
+                    At DN Software Solution, founded by Md Faizan, we specialize in building professional websites, e-commerce platforms, and custom applications. Our goal is to create digital solutions that make a real difference for your business.
                 </p>
             </AnimationContainer>
 

@@ -1,7 +1,1 @@
-import getReviews from "./get-reviews";
-import sendMessage from "./send-message";
-
-export {
-    getReviews,
-    sendMessage,
-};
+// Removed getReviews and sendMessage imports and exports for static export compatibility.

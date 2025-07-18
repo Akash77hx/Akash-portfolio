@@ -17,17 +17,17 @@ const DATA = {
         social: {
             github: {
                 name: "GitHub",
-                url: "https://github.com/Shreyas-29",
+                url: "https://github.com/arvindgfx1/",
                 icon: Icons.github,
             },
             linkedin: {
                 name: "LinkedIn",
-                url: "https://linkedin.com/in/shreyas-sihasane-441b95238",
+                url: "https://www.linkedin.com/in/mr-arvind-kumar-26674a352/",
                 icon: Icons.linkedin,
             },
             youtube: {
                 name: "YouTube",
-                url: "https://www.youtube.com/channel/UCrqsZYcbNVO2F8FS-xIIiZg",
+                url: "https://www.youtube.com/@Arvindedition",
                 icon: Icons.youtube,
             },
             resume: {
@@ -37,7 +37,7 @@ const DATA = {
             },
             coffe: {
                 name: "Buy me a coffee",
-                url: "https://www.buymeacoffee.com/shreyas29",
+                url: "#",
                 icon: Icons.coffeeInvert,
             },
         },

@@ -23,7 +23,7 @@ const Head = () => {
             <meta name='keywords' content={meta.keywords} />
             <meta property='og:url' content={`https://shreyas-sihasane.vercel.app${pathname}`} />
             <link rel='canonical' href={`https://shreyas-sihasane.vercel.app${pathname}`} />
-            <link rel='me' href='mailto:sihasaneshreyas@gmail.com' />
+            <link rel='me' href='mailto:alammdfaizan54@gmaill.com' />
             <meta property='og:type' content={meta.type} />
             <meta property='og:site_name' content='Shreyas Sihasane' />
             <meta property='og:description' content={meta.description} />
