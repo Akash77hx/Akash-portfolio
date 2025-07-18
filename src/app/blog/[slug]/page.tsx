@@ -32,8 +32,10 @@ const posts: any = {
   },
 };
 
-const Blog = async ({ params }: { params: { slug: string } }) => {
-    const { slug } = params;
+const Blog = async ({ params }: { params: Promise<{
+  slug: string;
+}> }) => {
+    const { slug } = await params;
     const data = posts[slug];
     if (!data) return <div>Not found</div>;
     return (
