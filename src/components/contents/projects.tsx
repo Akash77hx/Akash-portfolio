@@ -31,8 +31,8 @@ const Projects = () => {
     const identicalProject = {
         title: "Astra",
         description: "A modern landing page crafted for a no-code site builder, showcasing its potential and simplicity.",
-        github: "https://github.com/your-github/astra",
-        view: "https://astra-demo.com"
+        github: "#",
+        view: "#"
     };
     const data = [identicalProject, identicalProject, identicalProject, identicalProject];
 

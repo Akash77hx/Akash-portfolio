@@ -19,9 +19,11 @@ const AboutMe = () => {
             >
                 <div className="w-full flex items-center justify-center">
                     <p className="text-base md:text-lg text-justify w-full">
-                        Hi, I&apos;m Md Faizan, the founder of DN Software Solution — a virtual IT company dedicated to delivering high-quality digital solutions. With a passion for technology and design, I specialize in web development, app development, and custom IT services tailored to meet your business goals.
+                        Hi, I&apos;m Akash, a passionate developer dedicated to building clean, modern, and scalable digital solutions. With expertise in web development, app development, and custom IT services, I help businesses and individuals bring their ideas to life through technology.
                         <br /><br />
-                        At DN Software Solution, we believe in "Building Digital Dreams" — turning ideas into impactful online experiences. Whether you&apos;re a startup looking for your first website or a business aiming to upgrade your digital presence, I provide end-to-end solutions that are reliable, scalable, and user-friendly.
+                        I believe in "writing code that solves problems and creates impact." My approach is focused on delivering solutions that are not only functional but also user-friendly, reliable, and future-ready.
+                        <br /><br />
+                        Whether it&apos;s developing a responsive website, crafting a seamless mobile app, or designing full-stack systems, I bring both technical expertise and creative problem-solving to every project.
                     </p>
                 </div>
             </AnimationContainer>

@@ -35,7 +35,7 @@ export const generateMetadata = ({
     keywords = [
          
     ],
-    author = process.env.NEXT_PUBLIC_AUTHOR_NAME || "Shreyas Sihasane",
+    author = process.env.NEXT_PUBLIC_AUTHOR_NAME || "Akash.77",
     twitterHandle = "@Shreyas29",
     type = "website",
     locale = "en_US",
@@ -64,7 +64,7 @@ export const generateMetadata = ({
         keywords,
         authors: [{ name: author }],
         creator: author,
-        publisher: process.env.NEXT_PUBLIC_APP_NAME || "Shreyas Sihasane",
+        publisher: process.env.NEXT_PUBLIC_APP_NAME || "Akash.77",
         formatDetection: {
             email: false,
             address: false,
@@ -75,7 +75,7 @@ export const generateMetadata = ({
         // OpenGraph
         openGraph: {
             type,
-            siteName: process.env.NEXT_PUBLIC_APP_NAME || "Shreyas Sihasane",
+            siteName: process.env.NEXT_PUBLIC_APP_NAME || "Akash.77",
             title,
             description,
             ...(imageUrl && {

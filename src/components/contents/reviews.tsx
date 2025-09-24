@@ -14,7 +14,7 @@ type ReviewProps = {
 const Reviews = async () => {
 
     const reviews = [
-      { name: "ARVIND KUMAR", country: "INDIA", rating: 5, text: "DN Software Solution delivered exactly what I needed — a clean, fast, and responsive website. Md Faizan is very professional and understands every requirement clearly. Highly recommended!" },
+      { name: "ARVIND KUMAR", country: "INDIA", rating: 5, text: "Akash.77 delivered exactly what I needed — a clean, fast, and responsive website. Md Faizan is very professional and understands every requirement clearly. Highly recommended!" },
       { name: "Prince", country: "INDIA", rating: 5, text: "I’m really impressed with the service. The team helped me launch my e-commerce site quickly and handled everything from design to deployment. Great experience!" },
       { name: "Raja", country: "INDIA", rating: 5, text: "Md Faizan is very skilled and cooperative. He built a custom web application for my business and the result exceeded my expectations. Support after delivery is also excellent." }
     ];

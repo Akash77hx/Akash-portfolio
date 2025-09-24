@@ -2,7 +2,7 @@ import { ClientProps } from "@/types";
 import { gql, request } from "graphql-request";
 import axios from 'axios';
 
-const graphqlAPI = process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT!;
+const graphqlAPI = process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT || 'https://api-us-east-1.hygraph.com/v2/placeholder/placeholder';
 
 export const getAbout = async () => {
     const query = gql`

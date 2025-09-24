@@ -17,17 +17,17 @@ const DATA = {
         social: {
             github: {
                 name: "GitHub",
-                url: "https://github.com/arvindgfx1/",
+                url: "#",
                 icon: Icons.github,
             },
             linkedin: {
                 name: "LinkedIn",
-                url: "https://www.linkedin.com/in/mr-arvind-kumar-26674a352/",
+                url: "#",
                 icon: Icons.linkedin,
             },
             youtube: {
                 name: "YouTube",
-                url: "https://www.youtube.com/@Arvindedition",
+                url: "#.#",
                 icon: Icons.youtube,
             },
             resume: {

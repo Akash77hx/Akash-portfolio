@@ -46,7 +46,7 @@ const Hero = () => {
                 </div>
                 <div className="flex flex-col gap-2 flex-shrink-0">
                     <p className="text-sm font-medium text-foreground/70">
-                        faizzu.04 Welcome&apos;s you!
+                        Akash.77 Welcome&apos;s you!
                     </p>
                 </div>
             </AnimationContainer>
@@ -111,7 +111,7 @@ const Hero = () => {
                 className="relative mt-6 flex flex-col items-center justify-center gap-y-6 max-w-3xl mx-auto text-center"
             >
                 <p className="text-base text-muted-foreground !leading-relaxed">
-                    At DN Software Solution, founded by Md Faizan, we specialize in building professional websites, e-commerce platforms, and custom applications. Our goal is to create digital solutions that make a real difference for your business.
+                    At Akash.77, founded by Akash kanojiya, we specialize in building professional websites, e-commerce platforms, and custom applications. Our goal is to create digital solutions that make a real difference for your business.
                 </p>
             </AnimationContainer>
 
