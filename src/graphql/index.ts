@@ -25,31 +25,36 @@ export const getAbout = async () => {
 };
 
 export const getProjects = async () => {
-    const query = gql`
-        query Projects {
-            projectsConnection{
-                edges {
-                    cursor
-                    node {
-                        id
-                        title
-                        view
-                        github
-                        stack
-                        createdAt
-                        publishedAt
-                        description
-                        featuredImage {
-                            url
+    try {
+        const query = gql`
+            query Projects {
+                projectsConnection{
+                    edges {
+                        cursor
+                        node {
+                            id
+                            title
+                            view
+                            github
+                            stack
+                            createdAt
+                            publishedAt
+                            description
+                            featuredImage {
+                                url
+                            }
                         }
                     }
                 }
             }
-        }
-    `;
+        `;
 
-    const result: any = await request(graphqlAPI, query);
-    return result.projectsConnection.edges;
+        const result: any = await request(graphqlAPI, query);
+        return result.projectsConnection.edges;
+    } catch (error) {
+        console.error('GraphQL API error:', error);
+        throw error;
+    }
 };
 
 export const getTags = async () => {

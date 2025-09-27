@@ -16,15 +16,17 @@ const Projects = () => {
     const [projects, setProjects] = useState<ProjectProps[]>([]);
 
     useEffect(() => {
-        try {
-            const fetchProjects = async () => {
+        const fetchProjects = async () => {
+            try {
                 const data = await getProjects();
                 setProjects(data);
-            };
-            fetchProjects();
-        } catch (error) {
-            console.log(error);
-        }
+            } catch (error) {
+                console.log('GraphQL API not available, using hardcoded data:', error);
+                // Use hardcoded data as fallback
+                setProjects([]);
+            }
+        };
+        fetchProjects();
     }, []);
 
     // Hardcoded identical project data for all cards
